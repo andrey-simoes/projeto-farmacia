@@ -29,7 +29,7 @@ export const Exames = () => {
     const [options, setOptions] = useState([]);
 
     const navigate = useNavigate();
-    
+
 
     useEffect(() => async () => {
 
@@ -76,11 +76,9 @@ export const Exames = () => {
         setTags(sinonimos);
     }
 
-    const handleBackPanel = () =>{
+    const handleBackPanel = () => {
         navigate('/');
     }
-
-
 
 
     const submit = async (event) => {
@@ -90,7 +88,6 @@ export const Exames = () => {
 
             let sinonimos = [];
             let orientacoes = [];
-
 
             tags.forEach((tag) => {
                 sinonimos.push({
@@ -116,8 +113,16 @@ export const Exames = () => {
 
             const sendData = await api.addNewExame(data);
 
-            if (sendData) {
-                addTitleText('')
+            if (submit) {
+                setAddTitleText('');
+                setAddDescText('');
+                setSelectedShips([]);
+                setTags([]);
+                alert('Exame Cadastrado com Sucesso');
+
+            }
+            else{
+                alert('teste else')
             }
 
         } else {
@@ -137,7 +142,6 @@ export const Exames = () => {
                 method='POST'
                 onSubmit={e => submit(e)}
             >
-
                 <div className='inputs'>
                     <label htmlFor="titulo" className='label'>Nome do Exame</label>
                     <input
@@ -148,7 +152,6 @@ export const Exames = () => {
                         className='titulo-exame'
                         placeholder='Digite o nome do Exame' />
                 </div>
-
                 <div className='inputs'>
                     <label htmlFor="descricao" className='label'>Descrição do Exame</label>
                     <textarea
@@ -158,7 +161,6 @@ export const Exames = () => {
                         className='desc-exame'
                         placeholder='Digite a descrição do Exame' />
                 </div>
-
                 <div>
                     <span className='label'>Sinônimos</span>
                     <div className='tags-input'>
@@ -259,7 +261,6 @@ export const Exames = () => {
                     </button>
                 </div>
             </form>
-
         </div>
 
     )

@@ -23,6 +23,7 @@ h1{
 
 .container{
   position: relative;
+  margin-top: 20px;
   padding: 25px;
   border-radius: 5px;
   background-color:rgb(231, 231, 231);
