@@ -1,0 +1,42 @@
+.menu {
+    position: relative;
+    width: 35rem;
+    background-color: #0043a7;
+    padding: 50px;
+    padding-right: 100px;
+}
+
+.titlePanel {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 1rem;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menuItem {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    list-style: none;
+}
+
+.menuItem.logout {
+    position: absolute;
+    bottom: 3rem;
+    left: 30px;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.menuItem:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    color: #0052cc;
+    transition: .3s ease-out;
+}

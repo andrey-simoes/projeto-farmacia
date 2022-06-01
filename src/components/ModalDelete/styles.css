@@ -1,0 +1,34 @@
+.modalDeleteTitle{
+    font-size: 25px;
+}
+
+.descDeleteModal{
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+
+.btnDelete{
+        border: 2px solid #db0000;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #db0000;
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+        width: 150px;
+}
+
+.btnStopDelete{
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #fff;
+        border: 2px solid #db0000;
+        color: #db0000;
+        cursor: pointer;
+        font-size: 15px;
+        width: 150px;
+        margin-left: 10px;
+    }

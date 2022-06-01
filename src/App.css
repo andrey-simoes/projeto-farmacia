@@ -29,6 +29,23 @@ h1{
   width: 35vw;
 }
 
+.backPanel{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  background-color: rgb(231, 231, 231);
+  color: #0052cc;
+  border: 1px solid #0052cc;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.backPanel:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .botao{
   display: flex;
   flex-direction: column;
@@ -44,6 +61,12 @@ h1{
   cursor: pointer;
 }
 
+.buttonsModalDelete{
+  display: flex;
+  gap: 10px;
+  margin-top: 50px;
+}
+
 .btnRequisito{
   position: absolute;
   top: 4em;
@@ -57,12 +80,26 @@ h1{
   font-size: 15px;
 }
 
+.btnVoltar{
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  color: #0052cc;
+  border-radius: 5px;
+  border: 2px solid #0052cc ;
+  cursor: pointer;
+  font-size: 15px;
+  width: 150px;
+}
+
 .btnRequisito:hover{
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .add-exame:hover{
   transform: scale(1.05);
+  cursor: pointer;
 }
 .seletor, .removedor{
   background-color: #fff;
