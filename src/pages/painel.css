@@ -1,16 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-.containerPanel{
+.containerPanel {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -18,7 +18,7 @@ body{
 }
 
 
-.main{
+.main {
     display: grid;
     grid-template-columns: repeat(1fr, 3);
     grid-template-rows: 150px, 1fr, 1fr, 1fr;
@@ -30,16 +30,16 @@ body{
     z-index: 10;
 }
 
-.subtitlePanel{
+.subtitlePanel {
     font-size: 3rem;
     margin-bottom: 30px;
 }
 
-.textPanel{
+.textPanel {
     font-size: 1.4rem;
 }
 
-.titleDiv{
+.titleDiv {
     grid-column: 1/3;
     grid-row: 1/2;
     height: 200px;
@@ -48,31 +48,11 @@ body{
 .card {
     display: grid;
     grid-template-columns: 1fr;
-    max-height: 400px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
-.card-box {
-    background-color: #fff;
-    margin: 10px 0;
-    padding: 20px;
-    list-style: none;
-    border-radius: 5px;
-    width: auto;
-    height: 90px;
-}
-
-.card-title {
-    font-size: 15px;
-}
-
-.card-body {
-    font-size: 12px;
-}
-
-
-.graphics{
+.graphics {
     background-color: #fff;
     grid-column: 1/2;
     grid-row: 2/3;
@@ -80,7 +60,7 @@ body{
     border-radius: 3rem;
 }
 
-.lastExames{
+.lastExames {
     grid-column: 2/3;
     grid-row: 2/3;
     padding: 3rem;
@@ -88,12 +68,13 @@ body{
     border-radius: 3rem;
 }
 
-.titleLastExames, .titleGraphics{
+.titleLastExames,
+.titleGraphics {
     font-size: 25px;
     margin-bottom: 2rem;
 }
 
-.qtdExames{
+.qtdExames {
     font-size: 6.2rem;
     padding: 15px;
     color: rgb(44, 43, 51);
@@ -104,24 +85,57 @@ body{
     height: 200px;
 }
 
-.legGraph{
+.legGraph {
     margin-top: 1rem;
     font-size: 1rem;
     padding-left: 16px;
 }
 
-@media (max-width: 1440px){
-    .subtitlePanel{ font-size: 1.5rem;}
-    .textPanel{ font-size: 0.7rem; }
+@media (max-width: 1640px) {
+    .subtitlePanel {
+        font-size: 1.3rem;
+    }
+
+    .textPanel {
+        font-size: 0.7rem;
+    }
+
+    .graphics {
+        padding: 2rem;
+        border-radius: 3rem;
+    }
+
+    .lastExames {
+        padding: 2rem;
+    }
+
+    .main {
+        gap: 1rem;
+        padding: 3rem 1.5rem;
+
+    }
+
+        .card {
+            max-height: 200px;
+        }
+    
         .graphics {
+            background-color: #fff;
             grid-column: 1/2;
             grid-row: 2/3;
             padding: 3rem;
             border-radius: 3rem;
+            max-height: 400px;
         }
+    
         .lastExames {
-            grid-column: 1/2;
-            grid-row: 3/4;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 3rem;
+            max-height: 400px;
         }
+    
 
 }
