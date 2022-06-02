@@ -136,6 +136,8 @@ body {
             border-radius: 3rem;
             max-height: 400px;
         }
-    
+        .titleDiv {
+            height: 100px;
+        }
 
 }
