@@ -2,14 +2,15 @@
     background-color: rgb(245, 245, 245);
     padding: 15px;
     color: #000;
-    margin: 10px 0;
+    margin: 5px;
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
-    width: auto;
+    width: 90%;
     height: 50px;
 }
 .exame:hover{
     color: #fff;
     background-color: #0052CC;
+    transition: all .3s ease-in;
 }

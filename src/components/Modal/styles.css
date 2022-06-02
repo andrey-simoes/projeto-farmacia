@@ -6,7 +6,9 @@
     width: 75px;
     margin-bottom: 10px;
     cursor: pointer;
-    margin-right: 10px;
+    margin-left: 10px;
+
+    background-color: #fff;
 }
 
 .tituloRequisito{

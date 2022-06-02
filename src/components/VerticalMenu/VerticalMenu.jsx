@@ -7,7 +7,7 @@ export const VerticalMenu = () => {
             <a href="/cadastro" >
                 <li className="menuItem"><i className="fi fi-rr-edit"></i> Cadastro de Exames</li>
             </a>
-            <a href="/cadastro" >
+            <a href="/orientacao" >
                 <li className="menuItem"><i className="fi fi-rr-edit"></i> Cadastro de Orientações</li>
             </a>
 

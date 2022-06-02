@@ -1,9 +1,8 @@
 .menu {
     position: relative;
-    width: 35rem;
+    width: 25rem;
     background-color: #0043a7;
-    padding: 50px;
-    padding-right: 100px;
+    padding: 25px;
 }
 
 .titlePanel {
