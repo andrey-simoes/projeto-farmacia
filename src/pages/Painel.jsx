@@ -42,12 +42,12 @@ export const Painel = () => {
                     <p className='textPanel'>Aqui é onde será feito todo o controle dos exames, tais como CADASTRO, EDIÇÃO e EXCLUSÃO</p>
                 </div>
                 <div className='graphics'>
-                    <h3 className='titleGraphics'>Gráficos</h3>
+                    <h3 className='titleGraphics'>Gráfico</h3>
                     <div className='qtdExames'>{exame.length}</div>
                     <p className='legGraph'>Exames Cadastrados</p>
                 </div>
                 <div className='lastExames'>
-                    <h3 className='titleLastExames'>Últimos Exames Adicionados</h3>
+                    <h3 className='titleLastExames'>Exames Adicionados</h3>
                     {exame &&
                         <div className="card">
                             {exame.map((item, index) => (

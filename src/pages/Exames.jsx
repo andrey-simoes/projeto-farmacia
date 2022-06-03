@@ -47,10 +47,6 @@ export const Exames = () => {
         setAddDescText(e.target.value);
     }
 
-    const handleAddRequisitosChange = (e) => {
-        setAddRequisitos(e.target.value);
-    }
-
     const handleDeselect = (index) => {
         let selectedTips = selectedShips.slice();
         selectedTips.splice(index, 1);
@@ -136,7 +132,6 @@ export const Exames = () => {
         <div className="container">
             <h1>Adição de Exames</h1>
             <button className='backPanel' onClick={handleBackPanel}>Voltar</button>
-            <Popup />
 
             <form
                 method='POST'
@@ -155,6 +150,8 @@ export const Exames = () => {
                 <div className='inputs'>
                     <label htmlFor="descricao" className='label'>Descrição do Exame</label>
                     <textarea
+                        cols="30" 
+                        rows="5"
                         name='descricao'
                         value={addDescText}
                         onChange={handleAddDescChange}
@@ -236,7 +233,7 @@ export const Exames = () => {
                                 return (
                                     <div className='descOrientacao' key={index}>
                                         <label htmlFor={index}>Insira uma descrição para {values.nome}</label>
-                                        <textarea id={index} cols="30" rows="10" onBlur={e => {
+                                        <textarea id={index} cols="30" rows="5" onBlur={e => {
                                             const selecionadas = [...selectedShips];
                                             const newSelectedShips = [selecionadas[index], selectedShips[index].descricao = e.target.value]
                                             console.log(newSelectedShips)
