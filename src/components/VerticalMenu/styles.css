@@ -1,12 +1,10 @@
 .menu {
     position: relative;
     background-color: #0043a7;
-    padding: 25px 10px;
+    padding: 25px 15px;
 }
 
-.painel{
-    width: 60vw;
-}
+
 
 .titlePanel {
     color: #fff;
@@ -43,10 +41,21 @@
     transition: .3s ease-out;
 }
 
-
-
 .btnMenu{
     border: none;
     padding: 5px;
     border-radius: 5px;
+}
+
+@media(max-width:440px){
+.menuItem {
+        padding: 15px 5px;
+        font-size: 15px;
+    }
+.titlePanel {
+    font-size: 14px;
+    margin-top: 1rem;
+    padding: 5px;
+    margin-bottom: 3rem;
+}
 }

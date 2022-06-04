@@ -5,7 +5,7 @@ import './styles.css';
 
 export const VerticalMenu = () => {
 
-    const [showDash, setShowDash] = useState(true);
+    const [showDash, setShowDash] = useState(false);
 
     
     const handleToggleDash = () => {
