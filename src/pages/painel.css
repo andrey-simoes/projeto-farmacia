@@ -53,6 +53,9 @@ body {
 }
 
 .graphics {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: #fff;
     grid-column: 1/2;
     grid-row: 2/3;
@@ -115,29 +118,70 @@ body {
         grid-template-rows: 100px, 1fr, 1fr, 1fr;
     }
 
-        .card {
-            max-height: 200px;
-        }
-    
-        .graphics {
-            background-color: #fff;
-            grid-column: 1/2;
-            grid-row: 2/4;
-            padding: 3rem;
-            border-radius: 3rem;
-            max-height: 400px;
-        }
-    
-        .lastExames {
-            grid-column: 2/3;
-            grid-row: 2/4;
-            padding: 2rem;
-            background-color: #fff;
-            border-radius: 3rem;
-            max-height: 400px;
-        }
-        .titleDiv {
-            height: 100px;
-        }
+    .card {
+        max-height: 200px;
+    }
 
+    .graphics {
+        background-color: #fff;
+        grid-column: 1/2;
+        grid-row: 2/4;
+        padding: 3rem;
+        border-radius: 3rem;
+        max-height: 400px;
+    }
+
+    .lastExames {
+        grid-column: 2/3;
+        grid-row: 2/4;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 3rem;
+        max-height: 400px;
+    }
+
+    .titleDiv {
+        height: 100px;
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .titleLastExames,
+    .titleGraphics {
+        font-size: 17px;
+        margin: 0.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .containerPanel {
+        height: 100%;
+    }
+
+    .graphics {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        padding: 1rem;
+    }
+
+    .lastExames {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        padding: 1rem;
+    }
+
+    .main {
+        padding: 2rem;
+    }
+
+    .qtdExames {
+        border: 20px solid #0043a7;
+        font-size: 4rem;
+        width: 150px;
+        height: 150px;
+    }
 }

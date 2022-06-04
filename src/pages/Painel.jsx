@@ -38,6 +38,7 @@ export const Painel = () => {
             <VerticalMenu />
             <div className="main">
                 <div className='titleDiv'>
+                    
                     <h2 className='subtitlePanel'>Dashboard</h2>
                     <p className='textPanel'>Aqui é onde será feito todo o controle dos exames, tais como CADASTRO, EDIÇÃO e EXCLUSÃO</p>
                 </div>

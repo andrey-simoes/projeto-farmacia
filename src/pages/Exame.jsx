@@ -13,18 +13,25 @@ export const Exame = () => {
     const navigate = useNavigate();
     const [exameItem, setExameItem] = useState([]);
     const [showProjectForm, setShowProjectForm] = useState(false);
-
-    useEffect(() => {
-        loadExame();
-    }, [])
-
-
+    const [nomeOrientacao, setNomeOrientacao] = useState([]);
     const [addTitleText, setAddTitleText] = useState('');
     const [addDescText, setAddDescText] = useState('');
     const [addRequisitos, setAddRequisitos] = useState([]);
     const [tags, setTags] = useState([]);
     const [selectedShips, setSelectedShips] = useState([]);
     const [options, setOptions] = useState([]);
+
+    useEffect(() => {
+        const getExame = async () => {
+            const response = await axios.get(`https://unisales-exames-hml.herokuapp.com/exames/${params.id}`);
+            setExameItem(response.data);
+        };
+        getExame();
+
+    }, [params.id]);
+
+
+
 
 
     const axiosInstance = axios.create({
@@ -38,7 +45,6 @@ export const Exame = () => {
     }
 
     useEffect(() => async () => {
-
         const response = await fetch('https://unisales-exames-hml.herokuapp.com/tiposOrientacao');
         const data = await response.json();
         return setOptions(data);
@@ -60,6 +66,22 @@ export const Exame = () => {
         setSelectedShips(selectedTips);
     }
 
+    const handleOrientacaoSelecionada = () => {
+        let orientacaoSelecionada = exameItem.orientacoes.map((item, index) => {
+            return(
+                <ul>
+                <li key={index}>
+                    <span>{item.descricao}</span>
+                </li>
+                </ul>
+            )
+        })
+        setNomeOrientacao(orientacaoSelecionada);
+        console.log(orientacaoSelecionada);
+
+    }
+
+
     const handleSelectionChange = (selectedShips) => {
         setSelectedShips(selectedShips)
     }
@@ -74,13 +96,6 @@ export const Exame = () => {
             return event.target.value = "";
         }
     };
-
-    const handledAddSinonimos = (sinonimos) => {
-        setTags(sinonimos);
-    }
-
-
-
 
     const submit = async (event) => {
         event.preventDefault();
@@ -127,20 +142,6 @@ export const Exame = () => {
         }
     }
 
-
-
-
-    const loadExame = async (id) => {
-        try {
-            let response = await fetch(`https://unisales-exames-hml.herokuapp.com/exames/${params.id}`);
-            let json = await response.json();
-            setExameItem(json);
-        }
-        catch {
-            <div>Algo deu errado</div>
-        }
-    }
-
     const handleBackPanel = () => {
         navigate('/');
     }
@@ -149,7 +150,7 @@ export const Exame = () => {
         setShowProjectForm(!showProjectForm);
     }
 
-
+    console.log(nomeOrientacao)
 
     return (
         <div className="containerExame">
@@ -245,13 +246,12 @@ export const Exame = () => {
                                             button: 'btn-remove',
                                             buttonActive: 'btn-remove-active'
                                         }}
-                                        onChange={handleDeselect}
-                                        options={exameItem.orientacoes}
+                                        onChange={handleOrientacaoSelecionada}
+                                        options={selectedShips}
                                         textProp="nome"
                                         valueProp="id"
                                         placeholder="Pesquisar.."
-                                        value={addRequisitos}
-
+                                        value={nomeOrientacao}
                                     />
                                 </div>
                             </div>
@@ -266,7 +266,6 @@ export const Exame = () => {
                                                     <textarea id={index} cols="30" rows="10" onBlur={e => {
                                                         const selecionadas = [...selectedShips];
                                                         const newSelectedShips = [selecionadas[index], selectedShips[index].descricao = e.target.value]
-                                                        console.log(newSelectedShips)
                                                     }}>
                                                     </textarea>
 

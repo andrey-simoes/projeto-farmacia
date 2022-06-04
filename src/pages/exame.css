@@ -88,3 +88,11 @@ body {
     font-size: 18px;
     font-weight: 400;
 }
+
+@media (max-width: 768px){
+    .containerExame{
+        width: 96vw;
+            padding: 10px;
+    }
+
+}
