@@ -57,8 +57,9 @@ export const Login = () => {
     return (
         <div className='master'>
         <div className='sideLogin'>
-            <h1>Bem-vindos ao Projeto TADS</h1>
+            <h1>Bem-vindos ao Projeto Integrador TADS</h1>
             <h2>Este projeto tem o intuito de realizar cadastros de exames e suas orientações para as turmas de Farmácia e Biomedicina.</h2>
+            <p>Como funciona? a idéia do projeto é facilitar às pessoas de consultarem as orientações necessárias para a realização de um exame, evitando a perda de exames por falta de cumprimento de algum requisito, seja ele JEJUM, REPOUSO, NECESSIDADE DE ACOMPANHANTE ou outros.</p>
         </div>
         <div className='mainLogin'>
             <h2>Faça seu Login</h2>
