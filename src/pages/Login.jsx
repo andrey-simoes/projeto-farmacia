@@ -48,11 +48,7 @@ export const Login = () => {
             };
             api.getToken(data);
 
-            if (submit) {
-                alert('Login com Sucesso');
-            }
-            else {
-            }
+
         } else {
             alert('Preencha todos os campos');
         }
@@ -71,7 +67,7 @@ export const Login = () => {
                 method='POST'
                 onSubmit={e => submit(e)}
             >
-                <div className='inputs'>
+                    <div className='inputsLogin'>
                     <label className='labelLogin' htmlFor="username">Usuário:</label>
 
                     <input 
@@ -83,7 +79,7 @@ export const Login = () => {
                     onChange={handleUser} />
                 </div>
 
-                <div className='inputs'>
+                <div className='inputsLogin'>
                     <label className='labelLogin' htmlFor="pass">Senha:</label>
                     <input 
                     className='inputLogin' 
