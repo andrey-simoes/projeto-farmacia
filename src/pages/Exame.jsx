@@ -30,6 +30,14 @@ export const Exame = () => {
 
     }, [params.id]);
 
+    useEffect(() => {
+        const autenticate = localStorage.getItem('token');
+        if (autenticate !== null) {
+            return
+        } else {
+            navigate('/')
+        }
+    }, [])
 
 
 

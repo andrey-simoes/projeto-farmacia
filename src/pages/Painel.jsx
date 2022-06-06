@@ -3,6 +3,7 @@ import './painel.css';
 import { useEffect, useState } from "react";
 import { ExameItem } from '../components/ExameItem/ExameItem';
 import { VerticalMenu } from '../components/VerticalMenu/VerticalMenu';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -14,7 +15,17 @@ import { VerticalMenu } from '../components/VerticalMenu/VerticalMenu';
 
 export const Painel = () => {
 
+    const navigate = useNavigate();
     const [exame, setExames] = useState([]);
+
+    useEffect(()=> {
+        const autenticate = localStorage.getItem('token');
+        if(autenticate !== null){
+            return 
+        }else {
+            navigate('/')
+        }
+    },[])
 
     useEffect(() => {
         loadExames();

@@ -1,7 +1,8 @@
 import react from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+
 
 
 export const Orientacao = () => {
@@ -49,6 +50,15 @@ export const Orientacao = () => {
     const handleBackPanel = () => {
         navigate(-1);
     }
+
+    useEffect(() => {
+        const autenticate = localStorage.getItem('token');
+        if (autenticate !== null) {
+            return
+        } else {
+            navigate('/')
+        }
+    }, [])
 
     return (
         <div>

@@ -30,6 +30,15 @@ export const Exames = () => {
 
     const navigate = useNavigate();
 
+    useEffect(() => {
+        const autenticate = localStorage.getItem('token');
+        if (autenticate !== null) {
+            return
+        } else {
+            navigate('/')
+        }
+    }, [])
+
 
     useEffect(() => async () => {
 
