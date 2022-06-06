@@ -22,7 +22,7 @@ body {
     flex-direction: column;
 }
 
-.mainLogin h2{
+.mainLogin h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 10px;
@@ -45,12 +45,12 @@ body {
     background-color: #3554d1;
 }
 
-.sideLogin h1{
+.sideLogin h1 {
     font-size: 35px;
     font-weight: 500;
 }
 
-.sideLogin h2{
+.sideLogin h2 {
     font-size: 20px;
     font-weight: 400;
 }
@@ -60,19 +60,18 @@ body {
     margin-top: 15px;
     color: #fff;
     background-color: #3554d1;
-    max-width: 500px;
     min-width: 400px;
     height: 40px;
     border: none;
     border-radius: 5px;
 }
 
-.btnLogin:hover{
+.btnLogin:hover {
     cursor: pointer;
-    transform:scale(1.1);
+    transform: scale(1.1);
 }
 
-.labelLogin{
+.labelLogin {
     font-size: 15px;
     font-weight: 400;
     margin-top: 15px;
@@ -81,9 +80,41 @@ body {
 
 .inputLogin {
     border: 1px solid #EEF2F5;
-    max-width: 500px;
     width: 400px;
     height: 40px;
     padding-left: 10px;
     border-radius: 5px;
+}
+
+.inputsLogin{
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media (max-width: 768px) {
+    .sideLogin {
+        display: none;
+    }
+
+    .mainLogin {
+        padding: 0.5em;
+        display: flex;
+        width: 100vw;
+        height: 100%;
+    }
+
+    .inputLogin {
+        width: 250px;
+        height: 40px;
+        padding-left: 10px;
+        border-radius: 5px;
+    }
+
+    .btnLogin {
+        width: 250px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+    }
 }
