@@ -32,7 +32,7 @@ export const Exames = () => {
 
     useEffect(() => {
         const autenticate = localStorage.getItem('token');
-        if (autenticate !== null && autenticate < 100) {
+        if (autenticate !== null) {
             return
         } else {
             navigate('/')
@@ -82,7 +82,7 @@ export const Exames = () => {
     }
 
     const handleBackPanel = () => {
-        navigate('/');
+        navigate('/painel');
     }
 
 

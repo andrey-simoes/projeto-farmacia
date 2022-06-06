@@ -53,7 +53,7 @@ export const Orientacao = () => {
 
     useEffect(() => {
         const autenticate = localStorage.getItem('token');
-        if (autenticate !== null && autenticate < 100) {
+        if (autenticate !== null) {
             return
         } else {
             navigate('/')

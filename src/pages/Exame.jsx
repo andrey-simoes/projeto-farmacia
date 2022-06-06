@@ -151,7 +151,7 @@ export const Exame = () => {
     }
 
     const handleBackPanel = () => {
-        navigate('/');
+        navigate('/painel');
     }
 
     const toggleProjectForm = () => {

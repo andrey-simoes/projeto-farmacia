@@ -7,12 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-// const axiosInstance = axios.create({
-//     baseURL: 'https://unisales-exames-hml.herokuapp.com/'
-// });
-
-
-
 export const Painel = () => {
 
     const navigate = useNavigate();
@@ -20,10 +14,10 @@ export const Painel = () => {
 
     useEffect(()=> {
         const autenticate = localStorage.getItem('token');
-        if(autenticate !== null && autenticate < 100){
+        if(autenticate !== null){
             return 
         }else {
-            navigate('/')
+            navigate()
         }
     },[])
 

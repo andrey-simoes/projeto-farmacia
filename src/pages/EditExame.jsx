@@ -35,11 +35,7 @@ export const EditExames = () => {
 
     useEffect(() => {
         const autenticate = localStorage.getItem('token');
-        if (autenticate !== null && autenticate < 100) {
-            return
-        } else {
-            navigate('/')
-        }
+
     }, [])
 
     useEffect(() => async () => {
@@ -88,7 +84,7 @@ export const EditExames = () => {
     }
 
     const handleBackPanel = () => {
-        navigate('/');
+        navigate('/painel');
     }
 
 
