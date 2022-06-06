@@ -20,7 +20,7 @@ export const Painel = () => {
 
     useEffect(()=> {
         const autenticate = localStorage.getItem('token');
-        if(autenticate !== null){
+        if(autenticate !== null && autenticate < 100){
             return 
         }else {
             navigate('/')

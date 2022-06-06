@@ -60,7 +60,7 @@ body {
     margin-top: 15px;
     color: #fff;
     background-color: #3554d1;
-    min-width: 400px;
+    width: 400px;
     height: 40px;
     border: none;
     border-radius: 5px;
@@ -98,14 +98,14 @@ body {
     }
 
     .mainLogin {
-        padding: 0.5em;
+        padding: 2em;
         display: flex;
         width: 100vw;
         height: 100%;
     }
 
     .inputLogin {
-        width: 250px;
+        width: 100%;
         height: 40px;
         padding-left: 10px;
         border-radius: 5px;
@@ -117,4 +117,5 @@ body {
         border: none;
         border-radius: 5px;
     }
+
 }

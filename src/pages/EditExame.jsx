@@ -33,6 +33,15 @@ export const EditExames = () => {
         }
     }
 
+    useEffect(() => {
+        const autenticate = localStorage.getItem('token');
+        if (autenticate !== null && autenticate < 100) {
+            return
+        } else {
+            navigate('/')
+        }
+    }, [])
+
     useEffect(() => async () => {
 
         const response = await fetch('https://unisales-exames-hml.herokuapp.com/tiposOrientacao');
