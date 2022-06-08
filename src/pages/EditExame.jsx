@@ -43,6 +43,7 @@ export const EditExames = () => {
         const response = await fetch('https://unisales-exames-hml.herokuapp.com/tiposOrientacao');
         const data = await response.json();
         return setOptions(data);
+        
 
     }, []);
 

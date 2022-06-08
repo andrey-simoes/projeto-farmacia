@@ -245,7 +245,6 @@ export const Exames = () => {
                                         <textarea id={index} cols="30" rows="5" onBlur={e => {
                                             const selecionadas = [...selectedShips];
                                             const newSelectedShips = [selecionadas[index], selectedShips[index].descricao = e.target.value]
-                                            console.log(newSelectedShips)
                                         }}>
                                         </textarea>
 

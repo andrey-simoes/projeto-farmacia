@@ -48,6 +48,7 @@ body {
 .card {
     display: grid;
     grid-template-columns: 1fr;
+    max-height: 350px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -119,7 +120,7 @@ body {
     }
 
     .card {
-        max-height: 200px;
+        max-height: 250px;
     }
 
     .graphics {

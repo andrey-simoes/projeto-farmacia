@@ -89,6 +89,27 @@ body {
     font-weight: 400;
 }
 
+.list-item {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.titutoOrientacao{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.descOrientacao{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.list-item li {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 768px){
     .containerExame{
         width: 96vw;

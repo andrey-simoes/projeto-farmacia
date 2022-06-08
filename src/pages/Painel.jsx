@@ -37,7 +37,6 @@ export const Painel = () => {
     }
 
 
-
     return (
         <div className='containerPanel'>
             <VerticalMenu />
@@ -50,6 +49,7 @@ export const Painel = () => {
                 <div className='graphics'>
                     <h3 className='titleGraphics'>Gráfico</h3>
                     <div className='qtdExames'>{exame.length}</div>
+                    
                     <p className='legGraph'>Exames Cadastrados</p>
                 </div>
                 <div className='lastExames'>

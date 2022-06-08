@@ -30,6 +30,7 @@ export const Exame = () => {
 
     }, [params.id]);
 
+
     useEffect(() => {
         const autenticate = localStorage.getItem('token');
         if (autenticate !== null) {
@@ -41,18 +42,21 @@ export const Exame = () => {
 
 
 
-
     const axiosInstance = axios.create({
         baseURL: 'https://unisales-exames-hml.herokuapp.com/'
     });
 
     const api = {
-        addNewExame: async (data) => {
+        editExame: async (data) => {
             let response = await axiosInstance.put(`exames/${params.id}`, data);
+
         }
     }
 
+
+
     useEffect(() => async () => {
+
         const response = await fetch('https://unisales-exames-hml.herokuapp.com/tiposOrientacao');
         const data = await response.json();
         return setOptions(data);
@@ -74,21 +78,6 @@ export const Exame = () => {
         setSelectedShips(selectedTips);
     }
 
-    const handleOrientacaoSelecionada = () => {
-        let orientacaoSelecionada = exameItem.orientacoes.map((item, index) => {
-            return(
-                <ul>
-                <li key={index}>
-                    <span>{item.descricao}</span>
-                </li>
-                </ul>
-            )
-        })
-        setNomeOrientacao(orientacaoSelecionada);
-        console.log(orientacaoSelecionada);
-
-    }
-
 
     const handleSelectionChange = (selectedShips) => {
         setSelectedShips(selectedShips)
@@ -104,6 +93,8 @@ export const Exame = () => {
             return event.target.value = "";
         }
     };
+
+    
 
     const submit = async (event) => {
         event.preventDefault();
@@ -122,24 +113,21 @@ export const Exame = () => {
             selectedShips.forEach((options, index) => {
                 orientacoes.push({
                     idTipo: options.id,
-                    idExame: null,
                     descricao: selectedShips[index].descricao
                 })
             });
-
-
             const data = {
                 "id": params.id,
                 "nome": exameItem.nome,
-                "descricao": exameItem.descricao,
+                "descricao": addDescText,
                 "sinonimos": sinonimos,
-                "orientacoes": exameItem.orientacoes
+                "orientacoes": orientacoes
             };
 
+            api.editExame(data);
 
             if (submit) {
                 alert('Exame Editado com Sucesso');
-
             }
             else {
                 alert('teste else')
@@ -158,7 +146,10 @@ export const Exame = () => {
         setShowProjectForm(!showProjectForm);
     }
 
-    console.log(nomeOrientacao)
+
+    // console.log(JSON.stringify(exameItem))
+    // console.log(exameItem.orientacoes[0].tipo.nome)
+    // console.log(selectedShips[0].tipo.nome)
 
     return (
         <div className="containerExame">
@@ -191,7 +182,7 @@ export const Exame = () => {
                                 <label htmlFor="descricao" className='label'>Descrição do Exame</label>
                                 <textarea
                                     name='descricao'
-                                    value={exameItem.descricao}
+                                    value={addDescText}
                                     onChange={handleAddDescChange}
                                     className='desc-exame'
                                     placeholder='Digite a descrição do Exame' />
@@ -228,7 +219,7 @@ export const Exame = () => {
                                     <FilteredMultiSelect
                                         onChange={handleSelectionChange}
                                         options={options}
-                                        selectedOptions={exameItem.orientacoes}
+                                        selectedOptions={selectedShips}
                                         textProp="nome"
                                         valueProp="id"
                                         buttonText="Adicionar"
@@ -254,12 +245,12 @@ export const Exame = () => {
                                             button: 'btn-remove',
                                             buttonActive: 'btn-remove-active'
                                         }}
-                                        onChange={handleOrientacaoSelecionada}
+                                        onChange={handleDeselect}
                                         options={selectedShips}
                                         textProp="nome"
                                         valueProp="id"
                                         placeholder="Pesquisar.."
-                                        value={nomeOrientacao}
+                                        value={addRequisitos}
                                     />
                                 </div>
                             </div>
@@ -271,12 +262,11 @@ export const Exame = () => {
                                             return (
                                                 <div className='descOrientacao' key={index}>
                                                     <label htmlFor={index}>Insira uma descrição para {values.nome}</label>
-                                                    <textarea id={index} cols="30" rows="10" onBlur={e => {
+                                                    <textarea id={index} cols="30" rows="5" onBlur={e => {
                                                         const selecionadas = [...selectedShips];
                                                         const newSelectedShips = [selecionadas[index], selectedShips[index].descricao = e.target.value]
                                                     }}>
                                                     </textarea>
-
                                                 </div>
 
                                             )
@@ -312,30 +302,25 @@ export const Exame = () => {
                     <ul>
                         {exameItem && exameItem.sinonimos?.map((item, index) => {
                             return (
-
                                 <li key={index}>
                                     <span>{item.nome}</span>
                                 </li>
-
                             )
                         })
-
                         }
                     </ul>
                 </div>
                 <div className="descExame">
                     <p>Orientações do Exame:</p>
-                    <ul>
+                    <ul className="list-item">
                         {exameItem && exameItem.orientacoes?.map((item, index) => {
                             return (
-
                                 <li key={index}>
-                                    <span>{item.descricao}</span>
+                                    <span className="tituloOrientacao">{exameItem.orientacoes[index].tipo.nome}</span>
+                                    <span className="descOrientacao">{item.descricao}</span>
                                 </li>
-
                             )
                         })
-
                         }
                     </ul>
                 </div>
