@@ -74,13 +74,18 @@ body {
 
     .searchExames {
         padding: 10px;
+        width: 50%;
         margin: 10px 5px;
         border: 1px solid #ccc;
     border-radius: 5px;
     }
 
-.titleLastExames,
 .titleGraphics {
+    font-size: 25px;
+    margin-bottom: 2rem;
+}
+
+.titleLastExames {
     font-size: 25px;
     margin-bottom: 0.5rem;
 }
@@ -194,4 +199,13 @@ body {
         width: 150px;
         height: 150px;
     }
+
+                .searchExames {
+                    padding: 10px;
+                    width: 90%;
+                    margin: 10px 5px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                }
+
 }
