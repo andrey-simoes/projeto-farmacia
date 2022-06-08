@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import './painel.css';
 import { useEffect, useState } from "react";
 import { ExameItem } from '../components/ExameItem/ExameItem';
@@ -13,14 +13,11 @@ export const Painel = () => {
     const [exame, setExames] = useState([]);
     const [busca, setBusca] = useState('');
 
+    const lowerBusca = busca.toLowerCase();
 
-    const examesFiltrados =  useMemo(()=> {
-        
-        const lowerBusca = busca.toLowerCase();
-        return exame.filter((exames, index) => 
+    const examesFiltrados =  exame.filter((exames, index) => 
         exame[index].nome.toString().toLowerCase().includes(lowerBusca));
 
-    },[busca])
 
 
 

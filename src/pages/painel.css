@@ -72,13 +72,13 @@ body {
     border-radius: 3rem;
 }
 
-    .searchExames {
-        padding: 10px;
-        width: 50%;
-        margin: 10px 5px;
-        border: 1px solid #ccc;
+.searchExames {
+    padding: 10px;
+    width: 50%;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    }
+}
 
 .titleGraphics {
     font-size: 25px;
@@ -200,12 +200,12 @@ body {
         height: 150px;
     }
 
-                .searchExames {
-                    padding: 10px;
-                    width: 90%;
-                    margin: 10px 5px;
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                }
+    .searchExames {
+        padding: 10px;
+        width: 90%;
+        margin: 10px 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
 
 }
