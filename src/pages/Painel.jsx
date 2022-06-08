@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './painel.css';
 import { useEffect, useState } from "react";
 import { ExameItem } from '../components/ExameItem/ExameItem';
@@ -11,6 +11,18 @@ export const Painel = () => {
 
     const navigate = useNavigate();
     const [exame, setExames] = useState([]);
+    const [busca, setBusca] = useState('');
+
+
+    const examesFiltrados =  useMemo(()=> {
+        
+        const lowerBusca = busca.toLowerCase();
+        return exame.filter((exames, index) => 
+        exame[index].nome.toString().toLowerCase().includes(lowerBusca));
+
+    },[busca])
+
+
 
     useEffect(()=> {
         const autenticate = localStorage.getItem('token');
@@ -54,9 +66,19 @@ export const Painel = () => {
                 </div>
                 <div className='lastExames'>
                     <h3 className='titleLastExames'>Exames Adicionados</h3>
-                    {exame &&
+                    
+                    <input
+                    type="text" 
+                    onChange={(e) => setBusca(e.target.value)} 
+                    value={busca}
+                    placeholder='Buscar Exames...'
+                    className="searchExames"
+                    name='buscaExame'
+                    />
+                    
+                    {examesFiltrados &&
                         <div className="card">
-                            {exame.map((item, index) => (
+                            {examesFiltrados.map((item, index) => (
                                 <ExameItem
                                     key={index}
                                     id={item.id}

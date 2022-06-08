@@ -72,10 +72,17 @@ body {
     border-radius: 3rem;
 }
 
+    .searchExames {
+        padding: 10px;
+        margin: 10px 5px;
+        border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+
 .titleLastExames,
 .titleGraphics {
     font-size: 25px;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .qtdExames {
@@ -140,6 +147,8 @@ body {
         border-radius: 3rem;
         max-height: 400px;
     }
+
+
 
     .titleDiv {
         height: 100px;
