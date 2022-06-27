@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .master {
@@ -23,13 +25,16 @@ body {
 }
 
 .mainLogin h2 {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    font-family: 'montserrat';
 }
 
 .mainLogin p {
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'roboto';
     font-weight: 400;
 }
 
@@ -46,21 +51,26 @@ body {
 }
 
 .sideLogin h1 {
-    font-size: 35px;
-    font-weight: 500;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 45px;
+    margin-bottom: 24px;
+    font-family: 'montserrat';
 }
 
 .sideLogin h2 {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.5rem;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    opacity: 90%;
 }
 
 .sideLogin p {
-    margin-top: 20px;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.4rem;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    font-family: 'roboto';
 }
 
 
@@ -72,6 +82,9 @@ body {
     height: 40px;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
+    font-family: 'roboto';
+    font-weight: normal;
 }
 
 .btnLogin:hover {
@@ -80,8 +93,9 @@ body {
 }
 
 .labelLogin {
-    font-size: 15px;
-    font-weight: 400;
+    font-family: 'montserrat';
+    font-size: 16px;
+    font-weight: 500;
     margin-top: 15px;
     margin-bottom: 5px;
 }
@@ -92,6 +106,8 @@ body {
     height: 40px;
     padding-left: 10px;
     border-radius: 5px;
+    font-size: 16px;
+    font-family: 'montserrat';
 }
 
 .inputsLogin{

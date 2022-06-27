@@ -299,25 +299,25 @@ export const Exame = () => {
                 </div>
                 <div className="descExame">
                     <p>Sinonimos do Exame:</p>
-                    <ul>
+                    <ul className="list-item">
                         {exameItem && exameItem.sinonimos?.map((item, index) => {
                             return (
                                 <li key={index}>
-                                    <span>{item.nome}</span>
+                                    <span className="descSinonimo">{item.nome}</span>
                                 </li>
                             )
                         })
                         }
                     </ul>
                 </div>
-                <div className="descExame">
-                    <p>Orientações do Exame:</p>
+                <div className="descOrientacao">
+                    <p className="orientacaoExame">Orientações do Exame:</p>
                     <ul className="list-item">
                         {exameItem && exameItem.orientacoes?.map((item, index) => {
                             return (
                                 <li key={index}>
                                     <span className="tituloOrientacao">{exameItem.orientacoes[index].tipo.nome}</span>
-                                    <span className="descOrientacao">{item.descricao}</span>
+                                    <span className="textoOrientacao">{item.descricao}</span>
                                 </li>
                             )
                         })

@@ -2,6 +2,7 @@ import react from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './orientacao.css';
 
 
 
@@ -61,7 +62,7 @@ export const Orientacao = () => {
     }, [])
 
     return (
-        <div>
+        <div className='container-orientacao'>
             <form
                 method='POST'
                 onSubmit={e => submit(e)}
@@ -73,7 +74,7 @@ export const Orientacao = () => {
                     <input
                         type="text"
                         name="titulo"
-                        className='titulo-exame'
+                        className='titulo-orientacao'
                         placeholder='Digite o nome da Orientação'
                         value={addNome}
                         onChange={handleAddNome}

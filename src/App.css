@@ -32,7 +32,7 @@ h1{
 
 .backPanel{
   position: absolute;
-  top: 1rem;
+  top: 2rem;
   right: 2rem;
   background-color: rgb(231, 231, 231);
   color: #0052cc;
@@ -110,18 +110,17 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
   border: 1px solid rgb(214, 216, 218);
 }
 
 .FilteredMultiSelect{
   display: flex;
-  width: 480px;
+  width: 100%;
   flex-direction: column;
 }
 
 .form-select-add{
-  height: 200px;
+  height: 150px;
   padding: 10px;
   font-size: 15px;
   margin-bottom: 10px;
@@ -134,7 +133,7 @@ h1{
 }
 
 .form-select {
-  height: 200px;
+  height: 150px;
   padding: 10px;
   font-size: 15px;
   margin-bottom: 10px;
@@ -146,6 +145,18 @@ h1{
   color: #000;
   font-size: 12px;
 }
+
+.selecaoOrientacoes{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.listaOrientacoes, .orientacoesSelecionadas{
+  width: 100%;
+}
+
 
 .btn-add{
   padding: 7px 0;
@@ -326,7 +337,7 @@ ul {
 
   @media (max-width: 1440px) {
     .container{
-      width: 50vw;
+      width: 70vw;
     }
     .btnRequisito{
       font-size: 11px;
@@ -348,7 +359,7 @@ ul {
       top: 80px;
       right: 25px;
     }
-    .backPanel{
-      top: 4.4rem;
+    .selecaoOrientacoes{
+      flex-direction: column;
     }
   }

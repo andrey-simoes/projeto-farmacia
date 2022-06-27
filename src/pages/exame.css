@@ -25,7 +25,9 @@ body {
 }
 
 .titleExame{
-    font-size: 27px;
+    font-size: 24px;
+    font-family: 'montserrat';
+    color: rgb(34, 34, 37);
 }
 
 .containerExameInfo{
@@ -43,7 +45,8 @@ body {
     background-color: #0052cc;
     color: #fff;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
+    font-family: 'montserrat';
 }
 
 .idExame{
@@ -55,8 +58,18 @@ body {
     border-radius: 10px;
 }
 
-.idExame p, h3{
-    font-size: 15px;
+.idExame p{
+    font-size: 16px;
+    font-family: 'roboto';
+    font-weight: 400;
+    color: rgb(34, 34, 37);
+}
+
+.idExame h3{
+    font-family: 'montserrat';
+    font-weight: 600;
+    color: rgb(34, 34, 37);
+    font-size: 16px;
 }
 
 .nomeExame {
@@ -68,41 +81,57 @@ body {
 }
 
 .nomeExame h3{
-    font-size: 27px;
+    font-size: 24px;
+    font-family: 'montserrat';
+    color: rgb(34, 34, 37);
 }
 .nomeExame p, .descExame p{
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
+    font-family: 'montserrat';
+    color: rgb(34, 34, 37);
 }
 
-.descExame {
+.orientacaoExame{
+        font-size: 20px;
+        font-weight: 500;
+        font-family: 'montserrat';
+        color: rgb(34, 34, 37);
+        margin-bottom: 24px;
+    }
+
+.descExame, .descOrientacao {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    padding: 20px;
+    padding: 10px 20px;
     background-color: #fff;
 }
 
 .descExame h3 {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 24px;
     font-weight: 400;
+    color: rgb(99, 99, 109);
+    font-family: 'roboto';
 }
 
 .list-item {
     display: flex;
     flex-direction: column;
-
-}
-
-.titutoOrientacao{
-    font-weight: 500;
     font-size: 20px;
+    font-family: 'roboto';
+    line-height: 24px;
+    color: rgb(34, 34, 37);
 }
 
-.descOrientacao{
+.textoOrientacao, .descSinonimo{
     font-weight: 400;
     font-size: 16px;
+    font-family: 'roboto';
+    margin: 16px 0;
+    color: rgb(99, 99, 109);
 }
 
 .list-item li {

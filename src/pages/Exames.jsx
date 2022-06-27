@@ -193,7 +193,8 @@ export const Exames = () => {
                         </ul>
                     </div>
                 </div>
-                <div>
+                <div className='selecaoOrientacoes'>
+                <div className='listaOrientacoes'>
                     <span className='label'>Selecionar Orientações</span>
                     <div className="seletor">
                         <FilteredMultiSelect
@@ -214,7 +215,7 @@ export const Exames = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className='orientacoesSelecionadas'>
                     <span className='label'>Orientações Selecionadas</span>
                     <div className="removedor">
                         <FilteredMultiSelect
@@ -233,6 +234,7 @@ export const Exames = () => {
                             value={addRequisitos}
                         />
                     </div>
+                </div>
                 </div>
 
                 <div>
@@ -256,8 +258,6 @@ export const Exames = () => {
                         }
                     </div>
                 </div>
-
-
                 <div className='botao'>
                     <button
                         type='submit'

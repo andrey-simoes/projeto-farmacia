@@ -8,12 +8,14 @@
 
 .titlePanel {
     color: #fff;
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 1rem;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 3rem;
     background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'montserrat';
+    font-weight: bold;
 }
 
 .menuItem {
@@ -22,6 +24,8 @@
     padding: 15px;
     font-size: 18px;
     list-style: none;
+    font-family: 'montserrat';
+    font-weight: 500;
 }
 
 .menuItem.logout {
@@ -32,6 +36,8 @@
     color: #fff;
     padding: 15px;
     font-size: 18px;
+    font-family: 'montserrat';
+    font-weight: 500;
 }
 
 .menuItem:hover {
@@ -45,6 +51,9 @@
     border: none;
     padding: 5px;
     border-radius: 5px;
+    font-size: 16px;
+    font-family: 'montserrat';
+    font-weight: 500;
 }
 
 @media(max-width:440px){

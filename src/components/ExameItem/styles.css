@@ -1,13 +1,14 @@
 .exame{
     background-color: rgb(245, 245, 245);
     padding: 15px;
-    color: #000;
+    color: rgb(34, 34, 37);
     margin: 5px;
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
     width: 90%;
     height: 50px;
+    font-family: 'montserrat';
 }
 .exame:hover{
     color: #fff;
